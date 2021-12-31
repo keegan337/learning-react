@@ -51,5 +51,5 @@ ReactDOM.render(
     document.getElementById('root')
 );
 ```
-
+The short hand for fragments is ```<></>```
 # Tips
