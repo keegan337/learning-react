@@ -22,7 +22,7 @@ function GitHubUser({login}) {
   const [data, setData] = useState(null);
   useEffect(() => {
     console.log("Use effect called");
-    fetch("https://api.github.com/users/keegan337")
+    fetch("https://api.github.com/users/keeganwhite")
     .then(response => response.json())
     .then(setData)
     .catch(console.error);
