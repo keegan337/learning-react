@@ -25,9 +25,14 @@ const element = <h1>Hello, world!</h1>;
 ### Fragmanets
 If we were to write the following:
 ```
+function App() {
+    return (
+        <h1> Hello World <h1/>
+    )
+}
 function AppTwo() {
     return (
-        <h1> Hello World<h1/>
+        <h1> Hello World two <h1/>
     )
 }
 ReactDOM.render(
@@ -38,11 +43,6 @@ ReactDOM.render(
 ```
 We would receive an error stating ```Adjacent JSX elements must be wrapped in an enclosing tag```. This can be solved with React [Fragments](https://reactjs.org/docs/fragments.html):
 ```
-function AppTwo() {
-    return (
-        <h1> Hello World<h1/>
-    )
-}
 ReactDOM.render(
     <React.Fragment>
         <App />
