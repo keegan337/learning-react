@@ -21,4 +21,35 @@ When using [Create React App](https://create-react-app.dev/docs/getting-started/
 const element = <h1>Hello, world!</h1>;
 ```
 
+## React
+### Fragmanets
+If we were to write the following:
+```
+function AppTwo() {
+    return (
+        <h1> Hello World<h1/>
+    )
+}
+ReactDOM.render(
+  <App />
+  <AppTwo />,
+  document.getElementById('root')
+);
+```
+We would receive an error stating ```Adjacent JSX elements must be wrapped in an enclosing tag```. This can be solved with React [Fragments](https://reactjs.org/docs/fragments.html):
+```
+function AppTwo() {
+    return (
+        <h1> Hello World<h1/>
+    )
+}
+ReactDOM.render(
+    <React.Fragment>
+        <App />
+        <AppTwo />
+    <React.Fragment />,
+    document.getElementById('root')
+);
+```
+
 # Tips
